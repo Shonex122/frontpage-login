@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-UA Compatible" content="ie-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <section id="container">
+      <h1>LOGIN</h1>
+      <div id="frontpage">
+        <form action="https://formspree.io/f/xvojawpy" method="POST">
+          <div class="input-box">
+            <input
+              type="text"
+              name="name"
+              id="Firstname"
+              placeholder="Enter your Firstname"
+              required
+              />
+              <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              name="name"
+              id="Lastname"
+              placeholder="Enter your Lastname"
+              required
+            />
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="eg.Johndoe@gmail.com"
+              required
+              />
+              <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="input-box"> 
+            <input
+              type="password"
+              name="name"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+            <i class="fa-solid fa-lock"></i> 
+          </div>
+          <div class="remember-forget">
+            <label> <input type="checkbox"> Remember me</label>
+            <a href="#">Forget Password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="#">Register </a></p>
+          </div>
+          <div class="terms">
+            <h4>
+              <label>  <input type="checkbox" /></label>
+            I understand and agree to the <span class="highlights-1">terms of use </span> and <span class="highlights-1">  privacy policy.</span>
+            </h4>
+          </div>
+        </form>
+        <footer>&copy;2023 Shonex, Inc</footer>
+      </div>
+    
+   
+    <script src="script.js"></script> 
+</body>
+</html>
