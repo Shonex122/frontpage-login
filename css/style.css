@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("/img/Wallpaper.webp");
+  background-image: url("../img/Wallpaper.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
