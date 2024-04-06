@@ -74,6 +74,14 @@ body {
   color: var(--primary-color);
 }
 
+.input-box img {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: invert(100%);
+}
+
 #container .remember-forget {
   display: flex;
   justify-content: space-between;
