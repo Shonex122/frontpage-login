@@ -1,25 +1,30 @@
-let password = document.getElementById("password");
-let eyeicon = document.getElementById("eyeicon");
-let icon = document.querySelector("img");
-// let eyeIcon = document.getElementById("eyeIcon");
+let showPasswordBtn = document.querySelector(".show-password");
+let inputBox = document.querySelector(".password-input");
+let passwordChecklist = document.querySelectorAll(".list-item");
 
-function showPassword() {
-  if (password.type == "password") {
-    password.type = "text";
-    eyeicon.src = "eye-closed.png";
-  } else {
-    password.type = "password";
-    eyeicon.src = "eye-open.png";
-  }
-}
+showPasswordBtn.addEventListener("click", () => {
+  showPasswordBtn.classList.toggle("fa-eye");
+  showPasswordBtn.classList.toggle("fa-eye-slash");
 
-// const showPassword = document.getElementById("showPassword");
-// const img_icon = showPassword.querySelector("img");
-// const input = document.querySelector("#password");
+  inputBox.type = inputBox.type == "password" ? "text" : "password";
+});
 
-// showPassword.addEventListener("click", () => {
-//   input.type = input.type === "password" ? "text" : "password";
-//   img_icon.src = img_icon.src.includes("open")
-//     ? "eye-closed.png"
-//     : "eye-closed.png";
-// });
+let validationRegex = [
+  { regex: /.{10,}/ }, // min 8 letters
+  { regex: /[0-9]/ }, // numbers from 0-9
+  { regex: /[a-z]/ }, // letters from a-z
+  { regex: /[A-Z]/ }, // letters from A-z
+  { regex: /[~A-Zz-z0-9]/ }, // special characters
+];
+
+inputBox.addEventListener("keyup", () => {
+  validationRegex.forEach((item, i) => {
+    let isValid = item.regex.test(inputBox.value);
+
+    if (isValid) {
+      passwordChecklist[i].classList.add("checked");
+    } else {
+      passwordChecklist[i].classList.remove("checked");
+    }
+  });
+});
